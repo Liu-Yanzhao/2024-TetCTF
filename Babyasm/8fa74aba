@@ -1,0 +1,610 @@
+(module
+  (type $type0 (struct (field $field0 (mut i32))))
+  (type $type1 (array (field (mut (ref null $type0)))))
+  (global $global0 (mut i32) (i32.const 96))
+  (global $global1 (mut i32) (i32.const 101))
+  (global $global2 (mut i32) (i32.const 20))
+  (global $global3 (mut i32) (i32.const 177))
+  (global $global4 (mut i32) (i32.const 155))
+  (global $global5 (mut i32) (i32.const 116))
+  (global $global6 (mut i32) (i32.const 108))
+  (global $global7 (mut i32) (i32.const 69))
+  (global $global8 (mut i32) (i32.const 84))
+  (global $global9 (mut i32) (i32.const 109))
+  (global $global10 (mut i32) (i32.const 103))
+  (global $global11 (mut i32) (i32.const 110))
+  (global $global12 (mut i32) (i32.const 111))
+  (global $global13 (mut i32) (i32.const 95))
+  (global $global14 (mut i32) (i32.const 116))
+  (global $global15 (mut i32) (i32.const 103))
+  (global $global16 (mut i32) (i32.const 97))
+  (global $global17 (mut i32) (i32.const 72))
+  (global $global18 (mut i32) (i32.const 20))
+  (global $global19 (mut i32) (i32.const 59))
+  (func $1 (;0;) (export "1")
+    global.get $global0
+    i32.const 19
+    i32.xor
+    global.set $global0
+    global.get $global1
+    i32.const 55
+    i32.xor
+    global.set $global1
+    global.get $global2
+    i32.const 32
+    i32.xor
+    global.set $global2
+    global.get $global3
+    i32.const 36
+    i32.xor
+    global.set $global3
+    global.get $global4
+    i32.const 19
+    i32.xor
+    global.set $global4
+    global.get $global5
+    i32.const 55
+    i32.xor
+    global.set $global5
+    global.get $global6
+    i32.const 32
+    i32.xor
+    global.set $global6
+    global.get $global7
+    i32.const 36
+    i32.xor
+    global.set $global7
+    global.get $global8
+    i32.const 19
+    i32.xor
+    global.set $global8
+    global.get $global9
+    i32.const 55
+    i32.xor
+    global.set $global9
+    global.get $global10
+    i32.const 32
+    i32.xor
+    global.set $global10
+    global.get $global11
+    i32.const 36
+    i32.xor
+    global.set $global11
+    global.get $global12
+    i32.const 19
+    i32.xor
+    global.set $global12
+    global.get $global13
+    i32.const 55
+    i32.xor
+    global.set $global13
+    global.get $global14
+    i32.const 32
+    i32.xor
+    global.set $global14
+    global.get $global15
+    i32.const 36
+    i32.xor
+    global.set $global15
+    global.get $global16
+    i32.const 19
+    i32.xor
+    global.set $global16
+    global.get $global17
+    i32.const 55
+    i32.xor
+    global.set $global17
+    global.get $global18
+    i32.const 32
+    i32.xor
+    global.set $global18
+    global.get $global19
+    i32.const 36
+    i32.xor
+    global.set $global19
+  )
+  (func $init (;1;) (export "init") (param $var0 i32) (result (ref $type1))
+    local.get $var0
+    array.new_default $type1
+    call $1
+  )
+  (func $array_fill (;2;) (export "array_fill") (param $var0 (ref null $type1)) (param $var1 i32) (param $var2 i32)
+    local.get $var0
+    local.get $var1
+    local.get $var2
+    i32.const 19
+    i32.add
+    i32.const -64
+    i32.sub
+    struct.new $type0
+    i32.const 1
+    array.fill $type1
+  )
+  (func $3 (;3;) (export "3") (param $var0 (ref null $type1)) (param $var1 i32) (result i32)
+    local.get $var0
+    local.get $var1
+    array.get $type1
+    struct.get $type0 $field0
+  )
+  (func $4 (;4;) (export "4") (param $var0 (ref null $type1)) (param $var1 i32) (param $var2 i32) (param $var3 i32)
+    local.get $var1
+    i32.const 0
+    i32.eq
+    if
+      local.get $var0
+      local.get $var2
+      local.get $var0
+      local.get $var2
+      call $3
+      local.get $var3
+      i32.add
+      i32.const 32
+      i32.xor
+      call $array_fill
+    else
+      local.get $var1
+      i32.const 1
+      i32.eq
+      if
+        local.get $var0
+        local.get $var2
+        local.get $var0
+        local.get $var2
+        call $3
+        local.get $var3
+        i32.add
+        i32.const 36
+        i32.xor
+        call $array_fill
+      else
+        local.get $var1
+        i32.const 2
+        i32.eq
+        if
+          local.get $var0
+          local.get $var2
+          local.get $var0
+          local.get $var2
+          call $3
+          local.get $var3
+          i32.add
+          i32.const 19
+          i32.xor
+          call $array_fill
+        else
+          local.get $var1
+          i32.const 3
+          i32.eq
+          if
+            local.get $var0
+            local.get $var2
+            local.get $var0
+            local.get $var2
+            call $3
+            local.get $var3
+            i32.add
+            i32.const 55
+            i32.xor
+            call $array_fill
+          end
+        end
+      end
+    end
+  )
+  (func $5 (;5;) (export "5") (param $var0 (ref null $type1)) (result i32)
+    (local $var1 i32)
+    local.get $var0
+    i32.const 0
+    call $3
+    i32.const 38793
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    else
+    end
+    local.get $var0
+    i32.const 1
+    call $3
+    i32.const 584
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 2
+    call $3
+    i32.const 738
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 3
+    call $3
+    i32.const 38594
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 4
+    call $3
+    i32.const 63809
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 5
+    call $3
+    i32.const 647
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 6
+    call $3
+    i32.const 833
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 7
+    call $3
+    i32.const 63602
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 8
+    call $3
+    i32.const 47526
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 9
+    call $3
+    i32.const 494
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 10
+    call $3
+    i32.const 663
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 11
+    call $3
+    i32.const 47333
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 12
+    call $3
+    i32.const 67041
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 13
+    call $3
+    i32.const 641
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 14
+    call $3
+    i32.const 791
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 15
+    call $3
+    i32.const 66734
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 16
+    call $3
+    i32.const 35553
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 17
+    call $3
+    i32.const 561
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 18
+    call $3
+    i32.const 673
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var0
+    i32.const 19
+    call $3
+    i32.const 35306
+    i32.eq
+    if
+      local.get $var1
+      i32.const 1
+      i32.add
+      local.set $var1
+    end
+    local.get $var1
+    i32.const 20
+    i32.eq
+    if (result i32)
+      i32.const 1
+    else
+      i32.const 0
+    end
+  )
+  (func $check (;6;) (export "check") (param $var0 (ref null $type1)) (result i32)
+    local.get $var0
+    i32.const 0
+    i32.const 1
+    local.get $var0
+    i32.const 0
+    call $3
+    global.get $global0
+    i32.add
+    call $4
+    local.get $var0
+    i32.const 1
+    i32.const 2
+    local.get $var0
+    i32.const 1
+    call $3
+    global.get $global1
+    i32.sub
+    call $4
+    local.get $var0
+    i32.const 2
+    i32.const 3
+    local.get $var0
+    i32.const 2
+    call $3
+    global.get $global2
+    i32.mul
+    call $4
+    local.get $var0
+    i32.const 3
+    i32.const 0
+    local.get $var0
+    i32.const 3
+    call $3
+    global.get $global3
+    i32.xor
+    call $4
+    local.get $var0
+    i32.const 0
+    i32.const 5
+    local.get $var0
+    i32.const 4
+    call $3
+    global.get $global4
+    i32.add
+    call $4
+    local.get $var0
+    i32.const 1
+    i32.const 6
+    local.get $var0
+    i32.const 5
+    call $3
+    global.get $global5
+    i32.sub
+    call $4
+    local.get $var0
+    i32.const 2
+    i32.const 7
+    local.get $var0
+    i32.const 6
+    call $3
+    global.get $global6
+    i32.mul
+    call $4
+    local.get $var0
+    i32.const 3
+    i32.const 4
+    local.get $var0
+    i32.const 7
+    call $3
+    global.get $global7
+    i32.xor
+    call $4
+    local.get $var0
+    i32.const 0
+    i32.const 9
+    local.get $var0
+    i32.const 8
+    call $3
+    global.get $global8
+    i32.add
+    call $4
+    local.get $var0
+    i32.const 1
+    i32.const 10
+    local.get $var0
+    i32.const 9
+    call $3
+    global.get $global9
+    i32.sub
+    call $4
+    local.get $var0
+    i32.const 2
+    i32.const 11
+    local.get $var0
+    i32.const 10
+    call $3
+    global.get $global10
+    i32.mul
+    call $4
+    local.get $var0
+    i32.const 3
+    i32.const 8
+    local.get $var0
+    i32.const 11
+    call $3
+    global.get $global11
+    i32.xor
+    call $4
+    local.get $var0
+    i32.const 0
+    i32.const 13
+    local.get $var0
+    i32.const 12
+    call $3
+    global.get $global12
+    i32.add
+    call $4
+    local.get $var0
+    i32.const 1
+    i32.const 14
+    local.get $var0
+    i32.const 13
+    call $3
+    global.get $global13
+    i32.sub
+    call $4
+    local.get $var0
+    i32.const 2
+    i32.const 15
+    local.get $var0
+    i32.const 14
+    call $3
+    global.get $global14
+    i32.mul
+    call $4
+    local.get $var0
+    i32.const 3
+    i32.const 12
+    local.get $var0
+    i32.const 15
+    call $3
+    global.get $global15
+    i32.xor
+    call $4
+    local.get $var0
+    i32.const 0
+    i32.const 17
+    local.get $var0
+    i32.const 16
+    call $3
+    global.get $global16
+    i32.add
+    call $4
+    local.get $var0
+    i32.const 1
+    i32.const 18
+    local.get $var0
+    i32.const 17
+    call $3
+    global.get $global17
+    i32.sub
+    call $4
+    local.get $var0
+    i32.const 2
+    i32.const 19
+    local.get $var0
+    i32.const 18
+    call $3
+    global.get $global18
+    i32.mul
+    call $4
+    local.get $var0
+    i32.const 3
+    i32.const 16
+    local.get $var0
+    i32.const 19
+    call $3
+    global.get $global19
+    i32.xor
+    call $4
+    local.get $var0
+    call $5
+  )
+)
